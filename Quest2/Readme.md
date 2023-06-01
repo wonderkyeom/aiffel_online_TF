@@ -30,34 +30,27 @@ if str(i) in pipe.keys():
 ```
 
 - [x] 3.코드가 에러를 유발할 가능성이 있나요?
+```python
+pipe = {'4':16, '8':12, '18':38, '20':74, '24':36, '32':56, '40':60, '48':54, '70':88, '76':86, '80':100, '90':92}
+snake = {'22':2, '28':6, '30':10, '44':26, '58':42, '66':14, '68':52, '72':50, '84':62, '94':64, '96':82, '98':78}
+```
+```python
+if str(i) in pipe.keys():
+        # + value만큼
+        goal[idx-1] = pipe[str(i)]
+    elif str(i) in snake.keys():
+        # - value만큼
+        goal[idx-1] = snake[str(i)]
+    else:
+        goal[idx-1] += i
+```
+선수의 위치를 다루는 데이터 형을 str, int 로 다루고 있어 입출력단에서 에러를 발생시킬 수 있을 것 같습니다
  
 - [x] 4.코드 작성자가 코드를 제대로 이해하고 작성했나요?
 
 - [x] 5.코드가 간결한가요?
 
 
-# 예시
-1. 코드의 작동 방식을 주석으로 기록합니다.
-2. 코드의 작동 방식에 대한 개선 방법을 주석으로 기록합니다.
-3. 참고한 링크 및 ChatGPT 프롬프트 명령어가 있다면 주석으로 남겨주세요.
-```python
-# 사칙 연산 계산기
-class calculator:
-    # 예) init의 역할과 각 매서드의 의미를 서술
-    def __init__(self, first, second):
-        self.first = first
-        self.second = second
-    
-    # 예) 덧셈과 연산 작동 방식에 대한 서술
-    def add(self):
-        result = self.first + self.second
-        return result
-
-a = float(input('첫번째 값을 입력하세요.')) 
-b = float(input('두번째 값을 입력하세요.')) 
-c = calculator(a, b)
-print('덧셈', c.add()) 
-```
 
 # 참고 링크 및 코드 개선
 ```python
